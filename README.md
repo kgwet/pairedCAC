@@ -1,3 +1,8 @@
+Testing the difference of 2 agreement coefficients for statistical
+significance
+================
+Kilem L. Gwet, Ph.D.
+2021-08-04
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
@@ -19,7 +24,8 @@ install.packages("pairedCAC")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This *x*<sup>2</sup> + 1 is a basic example which shows you how to solve
+a common problem:
 
 ``` r
 library(pairedCAC)

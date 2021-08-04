@@ -1,5 +1,9 @@
 ---
+title: "Testing the difference of 2 agreement coefficients for statistical significance"
+author: "Kilem L. Gwet, Ph.D."
+date: "`r Sys.Date()`"
 output: github_document
+#output: pdf_document
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -30,7 +34,7 @@ install.packages("pairedCAC")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This $x^2+1$ is a basic example which shows you how to solve a common problem:
 
 ```{r example}
 library(pairedCAC)
