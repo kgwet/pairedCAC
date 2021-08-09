@@ -118,5 +118,5 @@ conger.linear.i <- function(ratings,weights="unweighted",conflev=0.95,N=Inf){
   pe.r2 <- pe*(ri.vec>=2)
   conger.ivec <- (n/n2more)*(pa.ivec-pe.r2)/(1-pe)
   conger.ivec.x <- conger.ivec - 2*(1-conger.kappa) * (pe.ivec-pe)/(1-pe)
-  invisible(conger.ivec.x)
+  return(list("icoeff"=conger.ivec.x,"weights"=weights.mat))
 }

@@ -1,0 +1,27 @@
+{
+    "id": "2D5225C9",
+    "path": "~/Cloud Computing/General R Packages/pairedCAC/R/ttest.conger.r",
+    "project_path": "R/ttest.conger.r",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1628232081406.0,
+    "source_on_save": false,
+    "relative_order": 6,
+    "properties": {
+        "tempName": "Untitled2",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "50,15",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1628306678,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1628306678121,
+    "read_only": false,
+    "read_only_alternatives": []
+}

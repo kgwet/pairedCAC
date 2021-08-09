@@ -96,5 +96,5 @@ alpha.linear.i <- function(ratings,weights="unweighted",conflev=0.95,N=Inf){
 
   pe.ivec <- (agree.mat%*%pi.vec.w)/ri.mean - sum(pi.vec) * (ri.vec-ri.mean)/ri.mean
   krippen.ivec.x <- krippen.ivec - 2*(1-krippen.alpha) * (pe.ivec-pe)/(1-pe)
-  invisible(krippen.ivec.x)
+  return(list("icoeff"=krippen.ivec.x,"weights"=weights.mat))
 }

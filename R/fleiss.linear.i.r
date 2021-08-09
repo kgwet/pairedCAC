@@ -87,5 +87,5 @@ fleiss.linear.i <- function(ratings,weights="unweighted",conflev=0.95,N=Inf){
 
   pe.ivec <- (agree.mat%*%pi.vec.w)/ri.vec
   kappa.ivec.x <- kappa.ivec - 2*(1-fleiss.kappa) * (pe.ivec-pe)/(1-pe)
-  invisible(kappa.ivec.x)
+  return(list("icoeff"=kappa.ivec.x,"weights"=weights.mat))
 }

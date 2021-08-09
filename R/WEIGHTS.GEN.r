@@ -1,5 +1,3 @@
-
-
 identity.weights<-function(categ){
 	weights<-diag(length(categ))
 	return (weights)
@@ -8,7 +6,7 @@ identity.weights<-function(categ){
 quadratic.weights<-function(categ){
 	q<-length(categ)
 	weights <- diag(q)
-	if (is.numeric(categ)) { 
+	if (is.numeric(categ)) {
 	   categ.vec <- sort(categ)
 	}
 	else {
@@ -18,7 +16,7 @@ quadratic.weights<-function(categ){
 	xmax<-max(categ.vec)
 	for(k in 1:q){
 	    for(l in 1:q){
-		  weights[k,l] <- 1-(categ.vec[k]-categ.vec[l])^2/(xmax-xmin)^2 
+		  weights[k,l] <- 1-(categ.vec[k]-categ.vec[l])^2/(xmax-xmin)^2
 	    }
       }
 	return (weights)
@@ -27,7 +25,7 @@ quadratic.weights<-function(categ){
 linear.weights<-function(categ){
 	q<-length(categ)
 	weights <- diag(q)
-	if (is.numeric(categ)) { 
+	if (is.numeric(categ)) {
 	   categ.vec <- sort(categ)
 	}
 	else {
@@ -46,7 +44,7 @@ linear.weights<-function(categ){
 radical.weights<-function(categ){
 	q<-length(categ)
 	weights <- diag(q)
-	if (is.numeric(categ)) { 
+	if (is.numeric(categ)) {
 	   categ.vec <- sort(categ)
 	}
 	else {
@@ -66,7 +64,7 @@ radical.weights<-function(categ){
 ratio.weights<-function(categ){
 	q<-length(categ)
 	weights <- diag(q)
-	if (is.numeric(categ)) { 
+	if (is.numeric(categ)) {
 	   categ.vec <- sort(categ)
 	}
 	else {
@@ -86,7 +84,7 @@ ratio.weights<-function(categ){
 circular.weights<-function(categ){
 	q<-length(categ)
 	weights <- diag(q)
-	if (is.numeric(categ)) { 
+	if (is.numeric(categ)) {
 	   categ.vec <- sort(categ)
 	}
 	else {
@@ -108,7 +106,7 @@ circular.weights<-function(categ){
 bipolar.weights<-function(categ){
 	q<-length(categ)
 	weights <- diag(q)
-	if (is.numeric(categ)) { 
+	if (is.numeric(categ)) {
 	   categ.vec <- sort(categ)
 	}
 	else {

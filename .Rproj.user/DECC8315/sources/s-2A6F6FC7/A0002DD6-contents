@@ -31,33 +31,30 @@
 #' Gwet, K. L. (2016). Testing the Difference of Correlated Agreement
 #' Coefficients for Statistical Significance, \emph{Educational and
 #' Psychological Measurement}, Vol 76(4) 609-637.
-ttest.ac2 <- function(g1.ratings,g2.ratings,weights="unweighted",conflev=0.95,N=Inf,print=TRUE){
+#' @export
+ttest.ac2 <- function(g1.ratings,g2.ratings,weights="unweighted",
+                      conflev=0.95,N=Inf){
   n2 <- nrow(g2.ratings)
   n1 <- nrow(g1.ratings)
   if (n2==n1){
     coeff2.i<-ac2.linear.i(g2.ratings,weights,conflev,N)
     coeff1.i<-ac2.linear.i(g1.ratings,weights,conflev,N)
-    di = coeff2.i-coeff1.i
-    ac2.coeff1 = mean(coeff1.i)
-    ac2.coeff2 = mean(coeff2.i)
+    di = coeff2.i$icoeff-coeff1.i$icoeff
+    ac2.coeff1 = mean(coeff1.i$icoeff)
+    ac2.coeff2 = mean(coeff2.i$icoeff)
     coeff.diff <- ac2.coeff2-ac2.coeff1
     std.err <- sqrt(var(di)/n1)
     t.stat <- (ac2.coeff2-ac2.coeff1)/std.err
     p.value <- 2*(1-pt(abs(t.stat),n1-1))
-    if (print==TRUE){
-      cat("PAIRED T-TEST FOR TESTING THE DIFFERENCE BETWEEN 2 GWET's AC2 AGREEMENT COEFFICIENTS\n")
-      cat("------------------------------------------------------------------------------------\n")
-      cat("AC2 Coefficients: (Group 1: ", ac2.coeff1, ") -- (Group 2: ",ac2.coeff2,")\n")
-      cat("Standard Error of the Differences: ", std.err,"\n")
-      cat("Test Statistic: T= ",t.stat,"\n")
-      cat("P-value: ",p.value)
-    }
-    df.out <- data.frame(ac2.coeff1, ac2.coeff2,coeff.diff,std.err,t.stat,p.value)
-    #invisible(c(ac2.coeff1, ac2.coeff2,coeff.diff,std.err,t.stat,p.value))
+    n.obs <- n2
+    n.raters1 <- ncol(g1.ratings)
+    n.raters2 <- ncol(g2.ratings)
+    weight.mat <- coeff1.i$weights
+    df.out <- data.frame(ac2.coeff1, ac2.coeff2,coeff.diff,std.err,t.stat,p.value,n.obs,n.raters1,n.raters2)
   }else{
     cat("Both datasets must have the same number of subjects. One has ",n1," subjects, while the other has ", n2," subjects.")
-    #invisible(-1)
     df.out <- NULL
+    weight.mat <- NULL
   }
-  return(df.out)
+  return(list("test"=df.out,"weights"=weight.mat))
 }

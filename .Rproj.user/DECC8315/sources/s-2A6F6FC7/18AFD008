@@ -1,0 +1,27 @@
+{
+    "id": "18AFD008",
+    "path": "~/Cloud Computing/General R Packages/pairedCAC/R/ac2.linear.i.r",
+    "project_path": "R/ac2.linear.i.r",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1628306365838.0,
+    "source_on_save": false,
+    "relative_order": 11,
+    "properties": {
+        "tempName": "Untitled2",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "10,16",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1628293962,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1628293962,
+    "read_only": false,
+    "read_only_alternatives": []
+}

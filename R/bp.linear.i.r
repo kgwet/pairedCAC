@@ -84,5 +84,5 @@ bp.linear.i <- function(ratings,weights="unweighted",conflev=0.95,N=Inf){
 
   pe.r2 <- pe*(ri.vec>=2)
   bp.ivec <- (n/n2more)*(pa.ivec-pe.r2)/(1-pe)
-  invisible(bp.ivec)
+  return(list("icoeff"=bp.ivec,"weights"=weights.mat))
 }

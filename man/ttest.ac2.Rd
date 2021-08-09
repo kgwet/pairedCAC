@@ -9,8 +9,7 @@ ttest.ac2(
   g2.ratings,
   weights = "unweighted",
   conflev = 0.95,
-  N = Inf,
-  print = TRUE
+  N = Inf
 )
 }
 \arguments{

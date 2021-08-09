@@ -1,0 +1,27 @@
+{
+    "id": "5FA592BD",
+    "path": "~/Cloud Computing/General R Packages/pairedCAC/R/ttest.alpha.r",
+    "project_path": "R/ttest.alpha.r",
+    "type": "r_source",
+    "hash": "0",
+    "contents": "",
+    "dirty": false,
+    "created": 1628299274226.0,
+    "source_on_save": false,
+    "relative_order": 9,
+    "properties": {
+        "tempName": "Untitled2",
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "52,19",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1628306623,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1628306623403,
+    "read_only": false,
+    "read_only_alternatives": []
+}
