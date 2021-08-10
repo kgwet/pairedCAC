@@ -8,7 +8,7 @@
 ttest.fleiss(
   g1.ratings,
   g2.ratings,
-  weights.p = "unweighted",
+  weights = "unweighted",
   conflev = 0.95,
   N = Inf
 )
@@ -20,14 +20,14 @@ of ratings.}
 \item{g2.ratings}{is a mandatory parameter representing the second data frame
 of ratings.}
 
-\item{conflev, }{is an optional parameter representing the confidence level.
-It's default value is 0.95.}
-
 \item{weights}{is an optional parameter that defines the weights needed in a
 weighted analysis. It's default value is ``unweighted'' which requests the
 unweighted analysis.}
 
-\item{N=, }{is an optional parameter representing the size of the subject
+\item{conflev, }{is an optional parameter representing the confidence level.
+It's default value is 0.95.}
+
+\item{N}{is an optional parameter representing the size of the subject
 population. It's default value is infinity.}
 }
 \description{

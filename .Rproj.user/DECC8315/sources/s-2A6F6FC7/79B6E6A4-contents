@@ -39,9 +39,9 @@ ttest.pa <- function(g1.ratings,g2.ratings,weights="unweighted",conflev=0.95,N=I
     pa.coeff1 = mean(coeff1.i$icoeff)
     pa.coeff2 = mean(coeff2.i$icoeff)
     coeff.diff <- pa.coeff2-pa.coeff1
-    std.err <- sqrt(var(di)/n1)
+    std.err <- sqrt(stats::var(di)/n1)
     t.stat <- (pa.coeff2-pa.coeff1)/std.err
-    p.value <- 2*(1-pt(abs(t.stat),n1-1))
+    p.value <- 2*(1-stats::pt(abs(t.stat),n1-1))
     n.obs <- n2
     n.raters1 <- ncol(g1.ratings)
     n.raters2 <- ncol(g2.ratings)

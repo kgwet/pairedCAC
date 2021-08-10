@@ -26,7 +26,7 @@ unweighted analysis.}
 \item{conflev, }{is an optional parameter representing the confidence level.
 It's default value is 0.95.}
 
-\item{N=, }{is an optional parameter representing the size of the subject
+\item{N}{is an optional parameter representing the size of the subject
 population. It's default value is infinity.}
 }
 \description{

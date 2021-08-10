@@ -15,7 +15,7 @@
 #' unweighted analysis.
 #' @param conflev, is an optional parameter representing the confidence level.
 #' It's default value is 0.95.
-#' @param N=, is an optional parameter representing the size of the subject
+#' @param N is an optional parameter representing the size of the subject
 #' population. It's default value is infinity.
 #'
 #' @details
@@ -33,19 +33,19 @@
 #'    Coefficients for Statistical Significance, \emph{Educational and
 #'    Psychological Measurement}, \strong{76}(4) 609-637.
 #' @export
-ttest.fleiss <- function(g1.ratings,g2.ratings,weights.p="unweighted",conflev=0.95,N=Inf){
+ttest.fleiss <- function(g1.ratings,g2.ratings,weights="unweighted",conflev=0.95,N=Inf){
   n2 <- nrow(g2.ratings)
   n1 <- nrow(g1.ratings)
   if (n2==n1){
-    coeff2.i<-fleiss.linear.i(g2.ratings,weights=weights.p,conflev,N)
-    coeff1.i<-fleiss.linear.i(g1.ratings,weights=weights.p,conflev,N)
+    coeff2.i<-fleiss.linear.i(g2.ratings,weights=weights,conflev,N)
+    coeff1.i<-fleiss.linear.i(g1.ratings,weights=weights,conflev,N)
     di = coeff2.i$icoeff-coeff1.i$icoeff
     fleiss.coeff1 = mean(coeff1.i$icoeff)
     fleiss.coeff2 = mean(coeff2.i$icoeff)
     coeff.diff <- fleiss.coeff2-fleiss.coeff1
-    std.err <- sqrt(var(di)/n1)
+    std.err <- sqrt(stats::var(di)/n1)
     t.stat <- (fleiss.coeff2-fleiss.coeff1)/std.err
-    p.value <- 2*(1-pt(abs(t.stat),n1-1))
+    p.value <- 2*(1-stats::pt(abs(t.stat),n1-1))
     n.obs <- n2
     n.raters1 <- ncol(g1.ratings)
     n.raters2 <- ncol(g2.ratings)

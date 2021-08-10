@@ -14,7 +14,7 @@
 #' unweighted analysis.
 #' @param conflev, is an optional parameter representing the confidence level.
 #' It's default value is 0.95.
-#' @param N=, is an optional parameter representing the size of the subject
+#' @param N is an optional parameter representing the size of the subject
 #' population. It's default value is infinity.
 #'
 #' @details The 2 required parameters "g1.ratings" and "g2.ratings",
@@ -43,9 +43,9 @@ ttest.ac2 <- function(g1.ratings,g2.ratings,weights="unweighted",
     ac2.coeff1 = mean(coeff1.i$icoeff)
     ac2.coeff2 = mean(coeff2.i$icoeff)
     coeff.diff <- ac2.coeff2-ac2.coeff1
-    std.err <- sqrt(var(di)/n1)
+    std.err <- sqrt(stats::var(di)/n1)
     t.stat <- (ac2.coeff2-ac2.coeff1)/std.err
-    p.value <- 2*(1-pt(abs(t.stat),n1-1))
+    p.value <- 2*(1-stats::pt(abs(t.stat),n1-1))
     n.obs <- n2
     n.raters1 <- ncol(g1.ratings)
     n.raters2 <- ncol(g2.ratings)

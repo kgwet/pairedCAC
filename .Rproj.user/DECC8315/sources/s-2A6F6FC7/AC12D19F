@@ -1,27 +1,27 @@
 {
-    "id": "18AFD008",
-    "path": "~/Cloud Computing/General R Packages/pairedCAC/R/ac2.linear.i.r",
-    "project_path": "R/ac2.linear.i.r",
+    "id": "AC12D19F",
+    "path": "~/Cloud Computing/General R Packages/pairedCAC/R/ttest.bp.r",
+    "project_path": "R/ttest.bp.r",
     "type": "r_source",
-    "hash": "0",
+    "hash": "2583490667",
     "contents": "",
     "dirty": false,
-    "created": 1628306365838.0,
+    "created": 1628526117686.0,
     "source_on_save": false,
-    "relative_order": 11,
+    "relative_order": 10,
     "properties": {
         "tempName": "Untitled2",
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "10,16",
-        "scrollLine": "0"
+        "cursorPosition": "16,11",
+        "scrollLine": "10"
     },
     "folds": "",
-    "lastKnownWriteTime": 1628293962,
+    "lastKnownWriteTime": 1628532496,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1628293962,
+    "last_content_update": 1628532496090,
     "read_only": false,
     "read_only_alternatives": []
 }

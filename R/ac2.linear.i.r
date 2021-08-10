@@ -20,7 +20,7 @@ ac2.linear.i <- function(ratings,weights="unweighted",conflev=0.95,N=Inf){
 
   categ.init <- unique(as.vector(ratings.mat))
   if (is.numeric(categ.init))
-    categ <- sort(as.vector(na.omit(categ.init)))
+    categ <- sort(as.vector(stats::na.omit(categ.init)))
   else{
     categ.init <- trim(categ.init) #trim vector elements to remove leading and trailing blanks
     categ <- categ.init[nchar(categ.init)>0]

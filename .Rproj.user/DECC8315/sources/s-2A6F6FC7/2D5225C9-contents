@@ -44,9 +44,9 @@ ttest.conger <- function(g1.ratings,g2.ratings,weights="unweighted",conflev=0.95
     conger.coeff2 = mean(coeff2.i$icoeff)
 
     coeff.diff <- conger.coeff2-conger.coeff1
-    std.err <- sqrt(var(di)/n1)
+    std.err <- sqrt(stats::var(di)/n1)
     t.stat <- (conger.coeff2-conger.coeff1)/std.err
-    p.value <- 2*(1-pt(abs(t.stat),n1-1))
+    p.value <- 2*(1-stats::pt(abs(t.stat),n1-1))
 
     n.obs <- n2
     n.raters1 <- ncol(g1.ratings)
