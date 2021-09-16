@@ -2,7 +2,7 @@ Testing the difference of 2 agreement coefficients for statistical
 significance
 ================
 Kilem L. Gwet, Ph.D.
-2021-08-09
+2021-09-16
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
