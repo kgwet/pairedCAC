@@ -39,5 +39,8 @@ weight.mat.fn <- function(ratings,weights="unweighted"){
     weights.mat= as.matrix(weights)
     if (sum(weights.mat)==q) w.name <- "Unweighted"
   }
-  return(weights.mat)
+  dfra.weights <- as.data.frame(weights.mat)
+  colnames(dfra.weights) <- categ
+  rownames(dfra.weights) <- categ
+  return(dfra.weights)
 }
